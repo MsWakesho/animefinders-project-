@@ -19,10 +19,12 @@
     <!-- The Top Bar -->
     <nav class="navbar" style="background-color: #3f3128;">
         <div class="container-fluid ">
-           
-            <a class="navbar-brand text-white" href="#homepage" >
-                <img src="images/binoculars.jpeg" alt="Avatar Logo" style="width:40px; " class="rounded-pill"> ANIME
-                FINDERS</a>
+            <span>
+                <a class="navbar-brand text-white" href="#homepage">
+
+                    <img src="images/binoculars.jpeg" alt="Avatar Logo" style="width:40px; " class="rounded-pill"> ANIME
+                    FINDERS</a>
+            </span>
 
             <div class="button">
                 <a class="btn btn-light" href="#signup" role="button">Sign Up
@@ -63,14 +65,14 @@
                         <a class="nav-link text-white" href="#contact_us">Contact Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button color" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button color"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Genres
                         </a>
                         <ul class="dropdown-menu" style="background-color: #31241c;">
                             <li><a class="dropdown-item text-white" href="#">Comedy</a></li>
                             <li><a class="dropdown-item text-white" href="#">Dramedy</a></li>
-                            <li><a class="dropdown-item text-white"  href="#">Psychological Thriller</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Psychological Thriller</a></li>
                             <li><a class="dropdown-item text-white" href="#">Psychological Horror</a></li>
                             <li><a class="dropdown-item text-white" href="#">Ecchi</a></li>
                             <li><a class="dropdown-item text-white" href="#">Drama</a></li>
@@ -87,12 +89,44 @@
         </div>
     </nav>
 
+    <!-- Carousel Section -->
+
+    <div id="carousel" class="carousel slide carousel-fade" >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/spy-x-family-.jpg" class="d-block w-100" alt="SpyXFamily">
+          </div>
+          <div class="carousel-item">
+            <img src="images/hell's paradise2.jpg" class="d-block w-100" alt="Hell's Paradise">
+          </div>
+          <div class="carousel-item">
+            <img src="images/jujutsu kaisen poster by emily.jpeg" class="d-block w-100" alt=" JujuTsu Kaisen">
+          </div>
+          <div class="carousel-item">
+            <img src="images/bleach.jpg" class="d-block w-100" alt="Bleach">
+          </div>
+          <div class="carousel-item">
+            <img src="images/_ (1).jpeg" class="d-block w-100" alt="Anya Smiling">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!-- The Body Section -->
+
     <div class="container">
-        <div class="row ">
-            <div class="col-xl" style="border:1px solid black">
+        <div class="row gx-3 ">
+            <div class="col-xxl">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Anime Finders</h5>
+                        <h5 class="card-title"><span>Anime Finders</span></h5>
                         <p class="card-text">Kindly Place You Recommendation Below</p>
                         <div id="homepage">
 
@@ -107,175 +141,180 @@
                             </form>
                         </div>
 
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- The Sign Up Form -->
+
+            <div class="col-xxl">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Get Signed Up </h5>
+                        <div>
+                            <label for="">First Name:</label>
+                            <input type="text" id="fname" placeholder="Insert First Name">
+                        </div>
+
+
+                        <div>
+                            <label for="">Last Name:</label>
+                            <input type="text" id="lname" placeholder="Insert Last Name">
+                        </div>
+
+
+                        <div>
+                            <label for="">Username:</label>
+                            <input type="text" id="username" placeholder="Username Of Your Choice">
+                        </div>
+
+                        <div>
+                            <label for="">Email Address:</label>
+                            <input type="email" id="email" placeholder="Insert Your Email Address">
+                        </div>
+
+                        <div>
+                            <label for="pwd">Password:</label>
+                            <input type="password" id="pwd" placeholder=" Password Of Your Choice">
+                        </div>
+
+                        <button type="submit" value="submit">Create Account</button>
+                        </form>
+                        <p>Please To Adhere To AnimeFinders Community Guidelines.</p>
+
                     </div>
 
-            </div>  
-                    <!-- The Sign Up Form -->
-                    <div class="row ">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Get Signed Up </h5>
-                                <div>
-                                    <label for="">First Name:</label>
-                                    <input type="text" id="fname" placeholder="Insert First Name">
-                                </div>
+                </div>
+            </div>
+    
+
+            <!-- Log In Form -->
+
+
+            <div class="col-xxl">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Get Logged In </h5>
+
+                        <div id="login">
+
+
+                            <form action="">
 
 
                                 <div>
-                                    <label for="">Last Name:</label>
-                                    <input type="text" id="lname" placeholder="Insert Last Name">
-                                </div>
-
-
-                                <div>
-                                    <label for="">Username:</label>
-                                    <input type="text" id="username" placeholder="Username Of Your Choice">
-                                </div>
-
-                                <div>
-                                    <label for="">Email Address:</label>
+                                    <label for="">Email:</label>
                                     <input type="email" id="email" placeholder="Insert Your Email Address">
                                 </div>
 
+
                                 <div>
                                     <label for="pwd">Password:</label>
-                                    <input type="password" id="pwd" placeholder=" Password Of Your Choice">
+                                    <input type="password" id="pwd" placeholder=" Insert Password">
                                 </div>
 
-                                <button type="submit" value="submit">Create Account</button>
-                                </form>
-                                <p>Please To Adhere To AnimeFinders Community Guidelines.</p>
+                                <button type="submit" value="submit">Log In </button>
+                            </form>
 
-                            </div>
+
+                            <p> Welcome Back Finder!</p>
 
                         </div>
-                    </div>
-             </div>
-
-                        <!-- Log In Form -->
-                        <div class="row ">
-                        <div class="col justify-content-left">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Get Logged In</h5>
-                                    <div id="login">
-
-
-                                        <form action="">
-
-
-                                            <div>
-                                                <label for="">Email:</label>
-                                                <input type="email" id="email" placeholder="Insert Your Email Address">
-                                            </div>
-
-
-                                            <div>
-                                                <label for="pwd">Password:</label>
-                                                <input type="password" id="pwd" placeholder=" Insert Password">
-                                            </div>
-
-                                            <button type="submit" value="submit">Log In </button>
-                                        </form>
-
-
-                                        <p> Welcome Back Finder!</p>
-
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <!-- About Us Page -->
-                        <div id="aboutus">
-                            <div class="aboutuspage">
-                                <div id="img1">
-                                    <img src="" alt="">
-                                </div>
-
-                                <div class="pg1">
-                                    <h3>Hello Finder</h3>
-                                    <p>The Dilemma of "What to Watch Next?" is Over!</p>
-                                    <p>Fear Not Anime Finder Is Here!</p>
-                                </div>
-
-                                <div>
-                                    <img src="" alt="">
-                                </div>
-
-                                <div class="pg2">
-
-                                    <h3>Rest Assured</h3>
-
-                                    <p>As A Finder You Will Be All To Get Best Recommendations From The Anime Community
-                                        Itself</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <!-- Community Guidlines -->
-
-                        <div id="communityguidelines">
-                            <div class="commuityguidelines_page">
-                                <h2>Anime Finders Community Guidelines</h2>
-                                <ul>
-                                    <li>
-                                        Avoid Vulgar and Explicit Comments.
-                                    </li>
-                                    <li>
-                                        Avoid Sharing Personal Information in The Comment Section.
-                                    </li>
-                                    <li>Rating Should be Objective,Not Subjective(Keep your Feeling At Bay)</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Contact Us -->
-                        <div id="contact_us">
-                            <div class="contactus_page">
-                                <h2>Dear Finder</h2>
-                                <p>In The Case you need Assistance,Kindly Press The "Help Me" Button Below </p>
-
-                                <form action="">
-
-                                    <input type="text" id="help" placeholder="Report Concern">
-
-                                    <button type="submit" value="submit">Push Concern</button>
-                                </form>
-
-
-                                <p>We Will Get Back To You ASAP</p>
-                            </div>
-                        </div>
-
-
 
 
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- About Us Page -->
+        <div id="aboutus">
+            <div class="aboutuspage">
+                <div id="img1">
+                    <img src="" alt="">
+                </div>
+
+                <div class="pg1">
+                    <h3>Hello Finder</h3>
+                    <p>The Dilemma of "What to Watch Next?" is Over!</p>
+                    <p>Fear Not Anime Finder Is Here!</p>
+                </div>
+
+                <div>
+                    <img src="" alt="">
+                </div>
+
+                <div class="pg2">
+
+                    <h3>Rest Assured</h3>
+
+                    <p>As A Finder You Will Be All To Get Best Recommendations From The Anime Community
+                        Itself</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Community Guidlines -->
+
+        <div id="communityguidelines">
+            <div class="commuityguidelines_page">
+                <h2>Anime Finders Community Guidelines</h2>
+                <ul>
+                    <li>
+                        Avoid Vulgar and Explicit Comments.
+                    </li>
+                    <li>
+                        Avoid Sharing Personal Information in The Comment Section.
+                    </li>
+                    <li>Rating Should be Objective,Not Subjective(Keep your Feeling At Bay)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div id="contact_us">
+            <div class="contactus_page">
+                <h2>Dear Finder</h2>
+                <p>In The Case you need Assistance,Kindly Press The "Help Me" Button Below </p>
+
+                <form action="">
+
+                    <input type="text" id="help" placeholder="Report Concern">
+
+                    <button type="submit" value="submit">Push Concern</button>
+                </form>
+
+
+                <p>We Will Get Back To You ASAP</p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script> -->
 

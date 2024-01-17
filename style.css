@@ -1,7 +1,17 @@
+
+
+
 body{
 
     background-color: rgb(32, 24, 22);
-}
+    margin: 0px;
+    padding: 25px;
+    box-sizing: border-box;
+    color: whitesmoke;
+    flex-direction:row;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}  
 
 .buttons{
 
@@ -15,3 +25,44 @@ body{
 
     height: 10vh;
 }
+
+
+.card{
+    margin: 100px;
+    color: white;
+    text-align: center;
+    padding:20px;
+    align-items: center;
+   width: 70%;
+   background-color: rgb(153, 96, 86);
+   
+}
+
+.col-xxl{
+
+     background-image: url(images/cyberpunk.jpg);
+    height: 65vh;
+    margin: 20px;
+
+
+}
+
+.card-title span{
+     
+     font-display: bold;
+}
+
+#carousel{
+    height: 80vh;
+    width:75%;
+   margin: 15px auto;
+  
+    
+}
+
+#carousel img{
+
+    height: 55vh;
+    width : 
+}
+
