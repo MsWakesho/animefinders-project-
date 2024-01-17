@@ -1,0 +1,17 @@
+body{
+
+    background-color: rgb(32, 24, 22);
+}
+
+.buttons{
+
+    padding: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.navbar{
+
+    height: 10vh;
+}
