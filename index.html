@@ -7,10 +7,9 @@
     <title>ANIME FINDERS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -26,7 +25,7 @@
                     FINDERS</a>
             </span>
 
-            <div class="button">
+            <div class="button gx-3">
                 <a class="btn btn-light" href="#signup" role="button">Sign Up
                     <button type="submit" class="btn btn-dark"></button></a>
 
@@ -42,7 +41,7 @@
     <nav class="navbar navbar-expand-lg" style="background-color: #6e513f;">
         <div class="container-fluid ">
 
-            <a class="navbar-brand text-white " href="#homepage">
+            <a class="navbar-brand text-white  fs-25" href="#homepage">
                 <img src="images/binoculars.jpeg" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> ANIME
                 FINDERS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -85,115 +84,169 @@
                         </ul>
                     </li>
                 </ul>
+                <form class="d-flex" id="animeSearchForm">
+                    <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning" type="submit">Search</button>
+                  </form>
+                <div id="searchResults"></div>
             </div>
         </div>
     </nav>
 
     <!-- Carousel Section -->
 
-    <div id="carousel" class="carousel slide carousel-fade" >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/spy-x-family-.jpg" class="d-block w-100" alt="SpyXFamily">
-          </div>
-          <div class="carousel-item">
-            <img src="images/hell's paradise2.jpg" class="d-block w-100" alt="Hell's Paradise">
-          </div>
-          <div class="carousel-item">
-            <img src="images/jujutsu kaisen poster by emily.jpeg" class="d-block w-100" alt=" JujuTsu Kaisen">
-          </div>
-          <div class="carousel-item">
-            <img src="images/bleach.jpg" class="d-block w-100" alt="Bleach">
-          </div>
-          <div class="carousel-item">
-            <img src="images/_ (1).jpeg" class="d-block w-100" alt="Anya Smiling">
-          </div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <div class="carousel-inner">
+            <div class="carousel-item active c-item">
+                <img src="images/spy-x-family-.jpg" class="d-block w-100 c-img" alt="SpyXFamily">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="images/hell's paradise2.jpg" class="d-block w-100 c-img" alt="Hell's Paradise">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="images/jujutsu-kaisen-thumb.jpg" class="d-block w-100 c-img" alt=" JujuTsu Kaisen">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="images/bleach.jpg" class="d-block w-100 c-img" alt="Bleach">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next" type="button" data-bs-target="carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
+
+    </div>
+
+    <!-- Results Of The Search Form -->
+    <div id="searchResults">
+       
+    </div>
 
     <!-- The Body Section -->
 
-    <div class="container">
-        <div class="row gx-3 ">
+    <div class="container text-center c2">
+        <!-- Image on The Left of Column -->
+        <div class="image-container">
+            <img src="images/deej5oc-10797835-3cbe-4d3d-b4e0-0a79d18bcdcd.png" alt="Uzui Tengen" class="left-image">
+
+        </div>
+
+        <div class="row align-items-center">
             <div class="col-xxl">
-                <div class="card">
+                <!-- <div class="card h-48  w-50">
                     <div class="card-body">
-                        <h5 class="card-title"><span>Anime Finders</span></h5>
-                        <p class="card-text">Kindly Place You Recommendation Below</p>
-                        <div id="homepage">
+                        <h5 class="card-title"><h5><span >Anime Finders</span></h5>
+                        <p class="card-text">Kindly Place Your Recommendation Below</p> -->
+                <div class="recbody">
+                    <h3>Anime Finders<span></span></h3>
+                    <p>Kindly Place Ypur Recommendation Below:</p>
+                    <div id="homepage">
 
-                            <form action="">
-                                <div>
-
-                                    <input type="text" id="input" placeholder="Go Ahead">
-                                </div>
-                                <button type="submit" value="submit">Push Recommendation</button>
-
-
-                            </form>
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- The Sign Up Form -->
-
-            <div class="col-xxl">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Get Signed Up </h5>
-                        <div>
-                            <label for="">First Name:</label>
-                            <input type="text" id="fname" placeholder="Insert First Name">
-                        </div>
+                        <form id="recommendation-form">
+                            <div>
+                              <label for ="animeTitle" name= "animeTitle" required>Anime Title:</label>
+                                <input type="animeTitle" id="animeTitle" placeholder="Jujutsu Kaisen">
+                            </div>
+                           
+                            <label for="rating">Rating:</label>
+                            <div class="rating-container">
+                                <label class="rating-label">1</label>
+                                <input type="range" id="rating" name="rating" min="1" max="10">
+                                <label class="rating-label">10</label>
+                            </div>
+                            <br>
+                
+                            <button type="submit" value="submit">Push Recommendation</button>
 
 
-                        <div>
-                            <label for="">Last Name:</label>
-                            <input type="text" id="lname" placeholder="Insert Last Name">
-                        </div>
-
-
-                        <div>
-                            <label for="">Username:</label>
-                            <input type="text" id="username" placeholder="Username Of Your Choice">
-                        </div>
-
-                        <div>
-                            <label for="">Email Address:</label>
-                            <input type="email" id="email" placeholder="Insert Your Email Address">
-                        </div>
-
-                        <div>
-                            <label for="pwd">Password:</label>
-                            <input type="password" id="pwd" placeholder=" Password Of Your Choice">
-                        </div>
-
-                        <button type="submit" value="submit">Create Account</button>
                         </form>
-                        <p>Please To Adhere To AnimeFinders Community Guidelines.</p>
+
+                        <div id=" recommendations">
+
+                        </div>
 
                     </div>
 
+
                 </div>
             </div>
+        </div>
+
+        
+        <!-- Image on the Right of Column -->
+        <div class="image-container-2">
+            <img src="images/SatoruGojoFullBodyAnime.webp" alt="Gojo Saturo" class="right-image">
+        </div>
+
+
+    </div>
     
+    <div id="recommendation">
+        <!-- Display search results here -->
+    </div>
 
-            <!-- Log In Form -->
+
+    </div>
+
+    <!-- The Sign Up Form -->
+    <!-- <div class="col-xxl">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Get Signed Up </h5>
+                    <div>
+                        <label for="">First Name:</label>
+                        <input type="text" id="fname" placeholder="Insert First Name">
+                    </div>
 
 
-            <div class="col-xxl">
+                    <div>
+                        <label for="">Last Name:</label>
+                        <input type="text" id="lname" placeholder="Insert Last Name">
+                    </div>
+
+
+                    <div>
+                        <label for="">Username:</label>
+                        <input type="text" id="username" placeholder="Username Of Your Choice">
+                    </div>
+
+                    <div>
+                        <label for="">Email Address:</label>
+                        <input type="email" id="email" placeholder="Insert Your Email Address">
+                    </div>
+
+                    <div>
+                        <label for="pwd">Password:</label>
+                        <input type="password" id="pwd" placeholder=" Password Of Your Choice">
+                    </div>
+
+                    <button type="submit" value="submit">Create Account</button>
+                    </form>
+                    <p>Please To Adhere To AnimeFinders Community Guidelines.</p>
+
+                </div>
+
+            </div> -->
+
+
+    <!-- Log In Form -->
+
+
+    <!-- <div class="col-xxl">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"> Get Logged In </h5>
@@ -227,96 +280,140 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- About Us Page -->
+    <!-- About Us Section -->
+    <div class="au-container">
         <div id="aboutus">
-            <div class="aboutuspage">
-                <div id="img1">
-                    <img src="" alt="">
+            <div class="au-row">
+                <div class="col-sm">
+
+
+                    <div class="card mb-3 ">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/_ (1).jpeg" class="img-fluid rounded-start" alt="Anya Smiling">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title"><strong>Hi Finder!</strong></h3>
+                                    <p class="card-text">Welcome To Anime Finders. <br>
+                                        Are You Always Struggling To Pick Your Next Binge-Worthy Anime?
+                                    </p>
+                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                            ago</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Dragon Ball Z Gif -->
+                <div class="col-md">
+                    <div class="rightgif">
+                        <img src="images/tumblr_mhdc0rRiVf1s3r24zo1_500.webp" class="rounded float-end"
+                            alt="DragonBall Z">
+                    </div>
                 </div>
 
-                <div class="pg1">
-                    <h3>Hello Finder</h3>
-                    <p>The Dilemma of "What to Watch Next?" is Over!</p>
-                    <p>Fear Not Anime Finder Is Here!</p>
+                <!-- Second  Section -->
+
+
+                <!-- Happy Girl Gif -->
+                <div class="col-md">
+                    <div class="leftgif">
+                        <img src="images/giphy (2).gif" class="rounded float-start" alt="DragonBall Z">
+                    </div>
                 </div>
 
-                <div>
-                    <img src="" alt="">
-                </div>
 
-                <div class="pg2">
 
-                    <h3>Rest Assured</h3>
-
-                    <p>As A Finder You Will Be All To Get Best Recommendations From The Anime Community
-                        Itself</p>
+                <div class="col-sm-">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/life074.png" class="img-fluid rounded-start" alt="Binochulars">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title"><strong> Fear Not!</strong></h3>
+                                    <p class="card-text"> Anime Finders is here <br>
+                                        You Will Always Get The Best Recommendation From This Anime Community.
+                                    </p>
+                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                            ago</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
 
-        <!-- Community Guidlines -->
 
-        <div id="communityguidelines">
-            <div class="commuityguidelines_page">
-                <h2>Anime Finders Community Guidelines</h2>
-                <ul>
-                    <li>
-                        Avoid Vulgar and Explicit Comments.
+
+
+    <!-- Community Guidlines -->
+    <div>
+    <div id="communityguidelines">
+        <div class="card text-bg-warning mb-3">
+            <div class="card-header">ANIME FINDERS COMMUNITY GUIDELINES</div>
+            <div class="card-body">
+                <h5 class="card-title">Anime Finders Community Guidelines</h5>
+                <ul class="card-text">
+                    <li> Avoid Vulgar and Explicit Comments.
                     </li>
                     <li>
                         Avoid Sharing Personal Information in The Comment Section.
                     </li>
-                    <li>Rating Should be Objective,Not Subjective(Keep your Feeling At Bay)</li>
+                    <li>Rating Should be Objective,Not Subjective(Keep your Feelings At Bay)</li>
                 </ul>
             </div>
         </div>
-
-        <!-- Contact Us -->
-        <div id="contact_us">
-            <div class="contactus_page">
-                <h2>Dear Finder</h2>
-                <p>In The Case you need Assistance,Kindly Press The "Help Me" Button Below </p>
-
-                <form action="">
-
-                    <input type="text" id="help" placeholder="Report Concern">
-
-                    <button type="submit" value="submit">Push Concern</button>
-                </form>
-
-
-                <p>We Will Get Back To You ASAP</p>
-            </div>
-        </div>
-
-
-
-
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script> -->
+     <!-- Contact Us -->
+
+    <div id="contact_us">
+        <div class="contactus_page">
+            <h2>Dear Finder</h2>
+            <p>In The Case You May Need Assistance,Kindly Press The "Help Me" Button Below </p>
+            <div class="mb-3">
+
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Kindly Elaborate:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                <button type="submit" value="submit">Push Concern</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+       
+
+      
+            
+
+
+
+    <script src="index.js"></script>
+    
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+ 
 
 </body>
 
