@@ -11,5 +11,5 @@
     "express": "^4.18.2",
     "fs.promises": "^0.1.2"
   },
-  "description": ""
+  "description": "-This is an Anime recommendation app that enables users to input their recommendations and it would post it on the site so that when new users come in they can look at the list and will search for the anime on the same app."
 }

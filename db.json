@@ -24,9 +24,12 @@
       "title": "Demon Slayer",
       "rating": "9",
       "id": 5
+    },
+    {
+      "title": "SpyXFamily ",
+      "rating": "6",
+      "id": 6
     }
-   
-   
   ],
   "users": []
 }
