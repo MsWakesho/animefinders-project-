@@ -1,5 +1,4 @@
-async function searchAnime(searchQuery) {
-  const apiUrl = `https://docs.api.jikan.moe//anime/{id}(/request)${searchQuery}`;
+async function searchAnime(searchQuery) {  const apiUrl = `https://api.jikan.moe/v4/anime/{id}/full${searchQuery}`;
   console.log('API URL:', apiUrl);
 
   try {
@@ -37,20 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Element with ID "animeSearchForm" not found.');
   }
 });
-// Event listener for anime search form
-document.getElementById('animeSearchForm').addEventListener('submit', async function (event) {
-  event.preventDefault();
 
-  const searchQuery = document.getElementById('searchInput').value;
 
-  try {
-    const searchResults = await searchAnime(searchQuery);
-    displaySearchResults(searchResults);
-  } catch (error) {
-    console.error('Error fetching search results:', error.message);
-  }
-});
-// Display search results
 function displaySearchResults(data) {
   const searchResultsContainer = document.getElementById('searchResults');
   searchResultsContainer.innerHTML = '';
@@ -62,7 +49,6 @@ function displaySearchResults(data) {
   });
 }
 
-// Event listener for recommendation form
 document.getElementById('recommendation-form').addEventListener('submit', async function (event) {
   event.preventDefault();
 
@@ -78,7 +64,7 @@ document.getElementById('recommendation-form').addEventListener('submit', async 
   }
 });
 
-// Event listener for anime search form
+
 document.getElementById('animeSearchForm').addEventListener('submit', async function (event) {
   event.preventDefault();
 
@@ -92,27 +78,29 @@ document.getElementById('animeSearchForm').addEventListener('submit', async func
   }
 });
 
-// Load recommendations on page load
-// Event listener for DOMContentLoaded
+
 document.addEventListener('DOMContentLoaded', async function () {
   await loadRecommendations();
 });
 
-// Load recommendations from server
+
 async function loadRecommendations() {
+  console.log('Loading recommendations.....')
   try {
     const recommendations = await fetchRecommendations();
+    console.log('Recommendations Loaded:', recommendations);
     displayRecommendations(recommendations);
   } catch (error) {
     console.error('Error loading recommendations:', error.message);
   }
 }
 
-// Fetch recommendations from server
+
 async function fetchRecommendations() {
+ console.log('Fetching the recommendations')
   try {
     const response = await fetch('http://localhost:5700/recommendations');
-
+    
     if (!response.ok) {
       throw new Error('Failed to fetch recommendations');
     }
@@ -120,11 +108,11 @@ async function fetchRecommendations() {
     return response.json();
   } catch (error) {
     console.error('Error fetching recommendations:', error.message);
-    throw error;
+    throw error; 
   }
 }
 
-// Submit recommendation to server
+
 async function submitRecommendation(recommendation) {
   try {
     await fetch('http://localhost:5700/recommendations', {
@@ -134,35 +122,116 @@ async function submitRecommendation(recommendation) {
       },
       body: JSON.stringify(recommendation),
     });
-  } catch (error) {
+
+  }
+  catch (error) {
     console.error('Error submitting recommendation:', error.message);
-    throw error;
+    throw error; 
   }
 }
 
-// Display recommendations on the page
+
 function displayRecommendations(recommendations) {
-  const recommendationsList = document.getElementById('recommendations');
-  recommendationsList.innerHTML = '';
+  const recommendationsContainer = document.getElementById('recommendation');
+
+  if(!recommendationsContainer){
+    console.error('Recommendation container not found');
+    return;
+  }
+  recommendationsContainer.innerHTML = '';
 
   recommendations.forEach(recommendation => {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${recommendation.title}: ${recommendation.recommendation} (Rating: ${recommendation.rating})`;
-    recommendationsList.appendChild(listItem);
+    const recommendationElement = document.createElement('div')
+    recommendationElement.innerHTML = `<ul>
+    <li><h3>${recommendation.title}</h5> <br>
+     <h4><strong>Rating: ${recommendation.rating}<strong><h4></li>
+     </ul>`;
+    recommendationsContainer.appendChild(recommendationElement);
   });
 }
 
-// Clear recommendation form fields
+
 function clearRecommendationForm() {
   document.getElementById('animeTitle').value = '';
-  document.getElementById('recommendation').value = '';
   document.getElementById('rating').value = '';
 }
 
 
+function addComment() {
+  const usernameInput = document.getElementById('username');
+  const commentInput = document.getElementById('comment');
+  const commentsContainer = document.getElementById('comments-container');
+
+  const username = usernameInput.value;
+  const commentText = commentInput.value;
+
+  if (!username || !commentText) {
+      alert('Please enter both username and comment.');
+      return;
+  }
+
+  const commentElement = document.createElement('div');
+  commentElement.className = 'comment';
+  commentElement.innerHTML = `
+      <strong>${username}:</strong>
+      <p>${commentText}</p>
+  `;
+  commentsContainer.appendChild(commentElement);
+
+  usernameInput.value = '';
+  commentInput.value = '';
+
+}
+// SignUp Form
+function submitUserInfo(){
+  const firstName= document.getElementById('fname').value
+  const lastName = document.getElementById('lname').value
+  const username = document.getElementById('username').value
+  const email =document.getElementById('email').value
+  const password =document.getElementById('pwd').value
+
+  const user ={
+    firstname:firstName,
+    lastname :lastName,
+    username:username,
+    email:email,
+    password:password
+  }
+
+  fetch('http://localhost:5700/users',{
+    method:'POST',
+    headers:{
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(user),
+  })
+  .then(response => response.json())
+  .then(data =>{
+    console.log('Finder Signed Up Successfully:', data);
+  })
+  .catch(error =>{
+    console.error('Error Posting The Error Message:,error');
+
+  });
+}
 
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   let signupBtn = document.getElementById("signupbtn");
+//   let signupForm = document.getElementById("signupForm");
+//   let loginBtn = document.getElementById("loginbtn");
+//   let loginForm = document.getElementById("loginForm");
 
+//   signupBtn.addEventListener("click", function () {
+//       signupForm.style.display = "block";
+//       loginForm.style.display = "none"; 
+//   });
+
+//   loginBtn.addEventListener("click", function () {
+//       loginForm.style.display = "block";
+//       signupForm.style.display = "none"; 
+//   });
+// });
 
 
 

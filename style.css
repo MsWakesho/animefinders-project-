@@ -5,13 +5,13 @@ body{
     margin: 0px;
     padding: 0px;
     color: whitesmoke;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     box-sizing: border-box;
-    box-shadow: rgb(143, 94, 22);
-   
+    
 }  
+
 
 .buttons{
 
@@ -19,6 +19,7 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 20px;
+    border-radius: 12px;
 }
 
 .navbar{
@@ -26,46 +27,8 @@ body{
     height: 10vh;
 }
 
-/* 
-.card{
-    margin: 100px auto;
-    color: white;
-    text-align: center;
-    padding:20px;
-    align-items: center;
-    background-color: rgb(153, 96, 86);
-    justify-content: center;
-    align-items: center;
- 
-   
-   
-}
-
-.card-title span{
-    background-color: rgb(83, 51, 37);
-}
-
-.card-body{
-    text-align: center;
-    font-size: 20px;
-}
 
 
-    
-} */ 
-
-.col-xxl{
-
-   
-    height: 65vh;
-    margin: 0px  auto;
-    width: 40%;
-    background-image: url(images/cyberpunk.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 30px;
-
-}
 
 .recbody{
     
@@ -94,13 +57,14 @@ body{
 
 .row{
 
-    width: 70%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px auto;
     border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 2px 4px 8px rgba(122, 90, 52, 0.1); 
+    background-color: burlywood;
     
 }
 
@@ -137,10 +101,6 @@ body{
 .right-image {
    width: 175%;
      height: 65vh;
-     
-    
-   
-   
 }
 
 .left-image {
@@ -153,16 +113,26 @@ body{
 }
 
 .card{
-    background-color: rgb(136, 68, 41);
- margin: 20px ;
- height: 35vh;
+background-color: rgb(136, 68, 41);
+margin: 20px ;
+height: vh;
 width: 800px;
- border-radius: 25px;
- color: white;
+border-radius: 25px;
+color: white;
+flex:1;
+margin-right:10px;
+}
 
-
+.card-page{
+   margin: 30px auto;
+   color: white ;
+   width: 100%;
 
 }
+
+
+
+
 
 .au-container {
     display: flex;
@@ -206,31 +176,150 @@ width: 800px;
     margin:10px auto;
 }
 
-.contactus_page{
+/* .contactus_page{
 
     height: auto;
     width: 37%;
-   background-color: rgb(201, 98, 13);
     border-radius: 12px;
     padding:60px auto;
+    height: 
+    
+} */
+
+
+
+
+
+#recommendation{
+    text-align: center;
+    background-image: url(images/giphy\ \(4\).gif);
+    width: 25%;
+    max-width: 400px;
+    margin: 0 auto;
+    color: rgb(218, 200, 200);
+    padding: 20px;
+    border-radius: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media(max-width:600px){
+    #recommendation{
+        width:90%
+    }
+}
+
+
+#comment-form{
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  width:30%;
+}
+
+#comments-container{
+      display: flex;
+      text-align: right;
+      
+}
+
+.commentsection{
+   height:30vh;
+   width:100%;
+
+}
+
+#comments-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+    background-color: white;
+    height: 15vh;
+}
+
+
+.commentsection{
+    height:30vh;
+    width:100%;
+ }
+ 
+ #comments-container {
+     max-width:2000px;
+     margin: auto;
+     padding: 10px;
+     border: 5px solid #d87e09;
+     border-radius: 15px;
+     margin-top: 20px;
+     text-align: left;
+ }
+
+#comment-form{
+
+    width: 100%;
+
+}
+
+
+.card-body{
+    padding: 20px;
+}
+
+.c-txt button{
+    border-radius: 5px;
+    box-shadow: 2px brown;
+    background-color:burlywood ;
+    color: white;
+}
+
+.form-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; margin-top: 30px;
+    margin: 30px auto;
+    box-sizing: border-box;
+   
+}
+
+.col-forms{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
     
 }
 
-/* .stars{
-    display:flex;
-    gap: 5px;
+.row-forms{
+    margin: 50px auto;
+    height:50vh;
+    background-color: burlywood;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.card-2{
+    background-image: url(images/deathnote.gif);
+    background-size: cover;
+    font-style: bold;
+    margin: 20px auto;
+    height: 40vh;
+    padding: 20px auto;
+    border-radius: 12px;
+    font-size:19px;
+    
+}
+
+/* #signup form{
+
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px auto;
+    border-radius: 12px;
 } */
 
-.stars i{
-    font-size: 24px;
-    color: #ffd700;
-    cursor:pointer;
-}
 
-.stars i:hover{
-    color: #ffd700;
-}
 
-.stars .far{
-    color: #ccc;
-}

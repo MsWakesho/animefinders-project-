@@ -1,14 +1,32 @@
 {
   "recommendations": [
     {
-      "id": "1",
-      "animetitle": "SpyXfamily",
-      "rating": "9"
+      "title": "Jujutsu Kaisen",
+      "rating": "10",
+      "id": 1
     },
     {
-      "id": "2",
-      "animetitle": "Kakegurui",
-      "rating": "10"
+      "title": "My Hero Academia",
+      "rating": "8",
+      "id": 2
+    },
+    {
+      "title": "Attack on Titan",
+      "rating": "8",
+      "id": 3
+    },
+    {
+      "title": "My Life In April",
+      "rating": "9",
+      "id": 4
+    },
+    {
+      "title": "Demon Slayer",
+      "rating": "9",
+      "id": 5
     }
-  ]
+   
+   
+  ],
+  "users": []
 }
